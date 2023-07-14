@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  file-manager:
+    image: magdyelsisi/file-manager:0.0.2-SNAPSHOT
+    ports:
+      - "8080:8080"
+    networks:
+      currency-network:
+    environment:
+      SPRING.DATASOURCE.URL: jdbc:postgresql://postgres-db:5432/file-manager
+    depends_on:
+      - postgres-db
+
+  postgres-db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      currency-network:
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: file-manager
+
+networks:
+  currency-network:

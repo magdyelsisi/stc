@@ -1,0 +1,34 @@
+type Query{
+    fileBySpaceAndFolderAndName(spaceName:String!,folderName:String!,fileName:String!):File
+}
+
+type File{
+    id: ID,
+    item:Item
+}
+
+type Item{
+    id:ID,
+    type:ItemTypeEnum,
+    name:String,
+    parentItem:Item,
+    permissionGroup:PermissionGroup
+}
+enum ItemTypeEnum {
+    SPACE
+    FOLDER
+    FILE
+}
+
+type PermissionGroup{
+    id:ID,
+    name:String,
+    permissions:[Permission]
+}
+
+type Permission{
+    id:ID,
+    userEmail:String,
+    level:String,
+
+}
