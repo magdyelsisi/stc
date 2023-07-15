@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import com.stc.filemanager.model.Item;
 import com.stc.filemanager.service.ItemService;
-import com.stc.filemanager.utl.Constants;
+import com.stc.filemanager.util.Constants;
 
 @RestController
 @RequestMapping("/item")

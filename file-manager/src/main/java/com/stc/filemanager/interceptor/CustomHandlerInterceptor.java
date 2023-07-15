@@ -6,11 +6,11 @@ import java.util.regex.Pattern;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.stc.filemanager.utl.Constants;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import com.stc.filemanager.exception.ValidationException;
+import com.stc.filemanager.util.Constants;
 
 @Component
 public class CustomHandlerInterceptor implements HandlerInterceptor {

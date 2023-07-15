@@ -19,7 +19,7 @@ import com.stc.filemanager.model.File;
 import com.stc.filemanager.model.Item;
 import com.stc.filemanager.model.PermissionGroup;
 import com.stc.filemanager.service.FileService;
-import com.stc.filemanager.utl.Constants;
+import com.stc.filemanager.util.Constants;
 
 @RestController
 @RequestMapping("/file")
